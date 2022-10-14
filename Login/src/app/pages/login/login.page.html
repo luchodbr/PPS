@@ -1,0 +1,51 @@
+<ion-header class="ion-no-border" translucent mode="ios" colord=dark>
+  <ion-toolbar>
+
+    <ion-title class="text-big" text-capitalize>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!-- 
+  <ion-item>
+    <ion-label>Ingrese su usuario y contraseña</ion-label>    
+    <ion-icon  slot="end" name="person" ></ion-icon>
+  </ion-item> -->
+
+  <form #formulario="ngForm" (ngSubmit)="onSubmitTemplate()">
+
+    <ion-list>
+
+      <ion-list-header>
+        <ion-item>
+          <ion-label position="fixed">Iniciar sesión</ion-label>    
+          <ion-icon  slot="start" name="person" ></ion-icon>
+        </ion-item>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" placeholder="Ingrese email" name="email" [(ngModel)]="usuario.email"
+          pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" placeholder="Ingrese password" name="password" [(ngModel)]="usuario.pass" required>
+        </ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-button fill="solid" expand="full" type="submit" [disabled]="formulario.invalid">
+      Enviar
+    </ion-button>
+
+    <ion-button slot="end" class="text-small" routerLink="/registro" size="small" fill="clear" shape="round">
+      Soy nuevo
+    </ion-button>
+
+  </form>
+
+</ion-content>

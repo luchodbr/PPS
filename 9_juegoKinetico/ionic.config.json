@@ -1,0 +1,8 @@
+{
+  "name": "juegoKinetico",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

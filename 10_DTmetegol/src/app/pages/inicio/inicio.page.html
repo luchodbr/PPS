@@ -1,0 +1,26 @@
+<ion-header  translucent >
+  <ion-toolbar color="tertiary">
+
+    <ion-title color="light" text-capitalize>Futbolito</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+
+  <div id="container" class="contenido">
+    <ion-button size="large" [routerLink]="['/login']" expand="block" fill="solid" mode="ios">
+      Entrar
+    </ion-button>
+    <ion-button size="medium" [routerLink]="['/registro']" fill="solid" mode="ios" >
+      Registrarme
+    </ion-button>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="tertiary">
+    <ion-button size="large" (click)="presentActionSheet()" expand="block" fill="solid" color="tertiary">
+      Perfiles de prueba
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

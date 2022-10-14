@@ -1,0 +1,6 @@
+<div *ngIf="partido.imagen != '0'">
+  <ion-img [src]="partido.imagen"></ion-img>
+</div>
+<span *ngIf="partido.imagen == 0" animated style="width: 200px; height: 200px;">
+  <h1><ion-label class="ion-padding">Sin foto</ion-label></h1>
+</span>

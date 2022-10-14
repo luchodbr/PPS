@@ -1,0 +1,8 @@
+{
+  "name": "despertadorGPS",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

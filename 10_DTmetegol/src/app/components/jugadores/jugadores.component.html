@@ -1,0 +1,7 @@
+<ion-list *ngFor="let jugador of jugadores">
+
+  <ion-item (click)="elegir(jugador)">
+    <ion-label>{{jugador.nombre}}</ion-label>
+  </ion-item>
+  
+</ion-list>

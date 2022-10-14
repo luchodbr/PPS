@@ -1,0 +1,44 @@
+<app-header titulo="Carga de resultados"></app-header>
+
+<ion-content class="fondo">
+  
+  <ion-list #lista class="contenido">
+    <ion-item-sliding *ngFor="let partido of partidos">
+      <ion-chip mode="ios" color="dark" outline="true">
+        <ion-label>Fecha :{{ partido.fecha | date:'short' }}</ion-label>
+      </ion-chip>
+      <ion-item (click)="presentPopover($event, partido)">
+
+        <ion-label>
+          <h2>{{partido.equipoA.usuario}} </h2>
+        </ion-label>
+
+        <ion-label>- {{partido.equipoA.goles}} </ion-label>
+        <ion-label>
+          <ion-icon slot="icon-only" name="football-outline"></ion-icon>
+        </ion-label>
+        <ion-label>{{partido.equipoB.goles}} -</ion-label>
+
+        <ion-label>
+          <h2>{{partido.equipoB.usuario}}</h2>
+        </ion-label>
+
+      </ion-item>
+
+
+      <ion-item-options side="start">
+        <ion-item-option color="tertiary" (click)="guardarFoto(partido)">
+          <ion-icon slot="icon-only" name="camera"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item-options side="end">
+        <ion-item-option color="success" (click)="mostrarVentana(partido)">
+          <ion-icon color="dark" slot="icon-only" name="football"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
+</ion-content>
